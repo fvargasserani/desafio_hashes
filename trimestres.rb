@@ -13,18 +13,8 @@ Noviembre: 91000,
 Diciembre: 21000
 }
 
-data = ARGV.map { |x| x.to_i }
-n = data.count
-n.times do |i|
-match = ventas.invert[data[i]]
-    if match
-        print "#{match} "
-    else
-        print 'No encontrado '
-    end
-end
+each_quarter = ['Q1','Q2','Q3','Q4']
+new_values = ventas.values.each_slice(3) {|a| p a}
+new_values_1 = new_values
 
-
-
-
-
+print new_values_1
