@@ -14,19 +14,14 @@ Diciembre: 21000
 }
 
 each_quarter = ['Q1','Q2','Q3','Q4']
-
 new_sales = ventas.values.each_slice(3).to_a
-
 n = new_sales.length
-
 final_sales = []
-
 n.times do |i|
     if i >= 0
     final_sales.push new_sales[i].sum
     end
 end
-
 quarter = each_quarter.zip(final_sales).to_h
 
 puts quarter
