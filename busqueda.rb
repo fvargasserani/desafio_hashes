@@ -14,11 +14,9 @@ Diciembre: 21000
 }
 
 data = ARGV.map { |x| x.to_i }
-found = false
 n = data.count
 n.times do |i|
     if ventas.invert[data[i]]
-        found = true
         print "#{ventas.invert[data[i]]} "
     else
         print 'No encontrado '
